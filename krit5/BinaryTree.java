@@ -12,7 +12,7 @@ public class BinaryTree {
         root = delete(root, value);
     }
 
-    private TreeNode delete(TreeNode node, int value) {
+    public TreeNode delete(TreeNode node, int value) {
         if (value < node.item) {
             node.lChild = delete(node.lChild, value);
         } else if (value > node.item) {
@@ -26,7 +26,6 @@ public class BinaryTree {
             node.item = minValue(node.rChild);
             node.rChild = delete(node.rChild, node.item);
         }
-
         return node;
     }
 
